@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#D3D3D3"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="0"
+        android:textSize="48sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnCE"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Các nút bàn phím máy tính -->
+
+    <!-- Nút CE -->
+    <Button
+        android:id="@+id/btnCE"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CE"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear" />
+
+    <!-- Nút C -->
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="C"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintStart_toEndOf="@+id/btnCE"
+        app:layout_constraintEnd_toStartOf="@+id/btnBackspace" />
+
+    <!-- Nút BS -->
+    <Button
+        android:id="@+id/btnBackspace"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="BS"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintStart_toEndOf="@+id/btnClear"
+        app:layout_constraintEnd_toStartOf="@+id/btnDivide" />
+
+    <!-- Nút / -->
+    <Button
+        android:id="@+id/btnDivide"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="/"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintStart_toEndOf="@+id/btnBackspace"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Hàng thứ hai: 7, 8, 9, x -->
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9E9E9"
+        android:text="7"
+        app:layout_constraintTop_toBottomOf="@id/btnCE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn8" />
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9E9E9"
+        android:text="8"
+        app:layout_constraintTop_toBottomOf="@id/btnClear"
+        app:layout_constraintStart_toEndOf="@+id/btn7"
+        app:layout_constraintEnd_toStartOf="@+id/btn9" />
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9E9E9"
+        android:text="9"
+        app:layout_constraintTop_toBottomOf="@id/btnBackspace"
+        app:layout_constraintStart_toEndOf="@+id/btn8"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiply" />
+
+    <Button
+        android:id="@+id/btnMultiply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="x"
+        app:layout_constraintTop_toBottomOf="@id/btnDivide"
+        app:layout_constraintStart_toEndOf="@+id/btn9"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Hàng tiếp theo: 4, 5, 6, - -->
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9E9E9"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@+id/btn7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn5" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9E9E9"
+        android:text="5"
+        app:layout_constraintTop_toBottomOf="@+id/btn8"
+        app:layout_constraintStart_toEndOf="@+id/btn4"
+        app:layout_constraintEnd_toStartOf="@+id/btn6" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9E9E9"
+        android:text="6"
+        app:layout_constraintTop_toBottomOf="@+id/btn9"
+        app:layout_constraintStart_toEndOf="@+id/btn5"
+        app:layout_constraintEnd_toStartOf="@+id/btnSubtract" />
+
+    <Button
+        android:id="@+id/btnSubtract"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultiply"
+        app:layout_constraintStart_toEndOf="@+id/btn6"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Hàng tiếp theo: 1, 2, 3, + -->
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9E9E9"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@+id/btn4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn2" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9E9E9"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@+id/btn5"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintEnd_toStartOf="@+id/btn3" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9E9E9"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@+id/btn6"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintEnd_toStartOf="@+id/btnAdd" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubtract"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Hàng cuối cùng: +/-, 0, ., = -->
+    <Button
+        android:id="@+id/btnPlusMinus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+/-"
+        app:layout_constraintTop_toBottomOf="@+id/btn1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn0" />
+
+    <Button
+        android:id="@+id/btn0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9E9E9"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@+id/btn2"
+        app:layout_constraintStart_toEndOf="@+id/btnPlusMinus"
+        app:layout_constraintEnd_toStartOf="@+id/btnDot" />
+
+    <Button
+        android:id="@+id/btnDot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintTop_toBottomOf="@+id/btn3"
+        app:layout_constraintStart_toEndOf="@+id/btn0"
+        app:layout_constraintEnd_toStartOf="@+id/btnEqual" />
+
+    <Button
+        android:id="@+id/btnEqual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="="
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd"
+        app:layout_constraintStart_toEndOf="@+id/btnDot"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
